@@ -5,8 +5,8 @@ const numberOfcategories = `Number of categories: ${items.length}`;
 console.log(numberOfcategories);
 
 const sortedCategories = items.forEach((item) => {
-  const headers = item.querySelector("h2").textContent;
-  const itemsByCategories = item.querySelectorAll("ul > li");
+  const headers = item.firstElementChild.textContent;
+  const itemsByCategories = item.lastElementChild.children;
 
   console.log(`Category: ${headers}`);
   console.log(`Elements: ${itemsByCategories.length}`);

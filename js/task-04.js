@@ -17,11 +17,11 @@ form.addEventListener("submit", (event) => {
   const formPass = form.elements.password.value;
 
   if (formEmail === "" || formPass === "") {
-    alert("All form fields must be filled in");
-  } else {
-    newUser = new User(formEmail, formPass);
-    console.log(newUser);
+    return alert("All form fields must be filled in");
   }
+
+  newUser = new User(formEmail, formPass);
+  console.log(newUser);
 
   form.reset();
 });
